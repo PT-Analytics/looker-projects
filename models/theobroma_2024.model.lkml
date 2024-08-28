@@ -112,4 +112,11 @@ explore: ga4_traffic {
     type: full_outer
     sql_on: ${vw_os.date_date} = ${ga4_traffic.date_date} ;;
   }
+
+  join: app_daily {
+    view_label: "App Data"
+    relationship: many_to_many
+    type: full_outer
+    sql_on: ${app_daily.date_date} = ${ga4_traffic.date_date} ;;
+  }
 }
