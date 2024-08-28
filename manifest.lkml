@@ -1,0 +1,3 @@
+constant: currency {
+  value: "₹"
+}
