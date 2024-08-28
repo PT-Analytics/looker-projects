@@ -17,7 +17,7 @@ view: bing_ads {
     type: string
     case:    {
       when: {
-        sql: ${campaign_name} LIKE '%Mumbai%';;
+        sql: ${campaign_name} LIKE '%Mumbai-mum%';;
         label: "Mumbai"
       }
       when: {
