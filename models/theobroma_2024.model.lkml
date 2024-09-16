@@ -119,4 +119,20 @@ explore: ga4_traffic {
     type: full_outer
     sql_on: ${app_daily.date_date} = ${ga4_traffic.date_date} ;;
   }
+
+  join: revenue_lead_dump {
+    view_label: "Revenue Dump"
+    relationship: many_to_many
+    type: full_outer
+    sql_on: ${revenue_lead_dump.date_date} = ${ga4_traffic.date_date} ;;
+  }
+
+
+  join: platform_wise_spends_trans_revenue {
+    view_label: "Channel Split"
+    relationship: many_to_many
+    type: full_outer
+    sql_on: ${platform_wise_spends_trans_revenue.date_date} = ${ga4_traffic.date_date}  ;;
+}
+
 }

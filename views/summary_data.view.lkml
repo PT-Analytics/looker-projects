@@ -34,9 +34,29 @@ view: vw_summary_data {
     ) ;;
   }
 
+
   dimension: month_year {
     type: string
     sql: CONCAT(${date_month_name},'-',${date_year}) ;;
+  }
+
+  dimension: month_sorting_order {
+    type: number
+    sql: ${date_year} * 100 + CASE
+        WHEN ${date_month_name} = 'January' THEN 1
+        WHEN ${date_month_name} = 'February' THEN 2
+        WHEN ${date_month_name} = 'March' THEN 3
+        WHEN ${date_month_name} = 'April' THEN 4
+        WHEN ${date_month_name} = 'May' THEN 5
+        WHEN ${date_month_name} = 'June' THEN 6
+        WHEN ${date_month_name} = 'July' THEN 7
+        WHEN ${date_month_name} = 'August' THEN 8
+        WHEN ${date_month_name} = 'September' THEN 9
+        WHEN ${date_month_name} = 'October' THEN 10
+        WHEN ${date_month_name} = 'November' THEN 11
+        WHEN ${date_month_name} = 'December' THEN 12
+    END ;;
+    hidden: yes
   }
 
   dimension: unique_key {

@@ -40,6 +40,26 @@ view: meta_ads {
     sql: ${TABLE}.campaign_name ;;
   }
 
+  dimension: campaign_type {
+
+    type: string
+    case:    {
+      when: {
+        sql: ${campaign_name} LIKE '%-BOF-%';;
+        label: "BOF"
+      }
+      when: {
+        sql: ${campaign_name} LIKE '%-MOF-%';;
+        label: "MOF"
+      }
+      when: {
+        sql: ${campaign_name} LIKE '%-TOF-%';;
+        label: "TOF"
+      }
+      else: "Others"
+    }
+  }
+
   dimension: modified_campaign_name {
     type: string
     sql: REGEXP_REPLACE(${TABLE}.campaign_name, r'\b[Tt]heo\b|\b[Tt]heobroma\b', 'Demo') ;;

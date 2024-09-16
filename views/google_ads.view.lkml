@@ -40,6 +40,39 @@ view: google_ads {
     sql: ${TABLE}.name ;;
   }
 
+  dimension: campaign_type {
+
+    type: string
+    case:    {
+      when: {
+        sql: ${campaign_name} LIKE '%-Brand-%';;
+        label: "Brand"
+      }
+      when: {
+        sql: ${campaign_name} LIKE '%-Core-%';;
+        label: "Core"
+      }
+      when: {
+        sql: ${campaign_name} LIKE '%-Performance-Max%' OR ${campaign_name} like '%-Pmax-%' OR ${campaign_name} like '%-pmax-%';;
+        label: "PMAX"
+      }
+      when: {
+        sql: ${campaign_name} LIKE '%-App-%';;
+        label: "App"
+      }
+      when: {
+        sql: ${campaign_name} LIKE '%-Youtube-%';;
+        label: "Youtube"
+      }
+      when: {
+        sql: ${campaign_name} LIKE '%-Installs-%';;
+        label: "Installs"
+      }
+
+      else: "Others"
+    }
+  }
+
   dimension: randomized_campaign_name {
     type: string
     sql: REGEXP_REPLACE(${TABLE}.name, r'\b[Tt]heo\b|\b[Tt]heobroma\b', 'Demo') ;;
