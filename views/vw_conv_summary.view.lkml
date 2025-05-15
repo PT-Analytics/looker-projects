@@ -26,6 +26,7 @@ view: vw_conv_summary {
   }
 
   measure: spends {
+    view_label: "Spends"
     type: sum
     sql: ${TABLE}.spends ;;
     html: @{currency}{{rendered_value}} ;;
@@ -33,6 +34,7 @@ view: vw_conv_summary {
   }
 
   measure: revenue {
+    view_label: "Revenue"
     type: sum
     sql: ${TABLE}.revenue ;;
     html: @{currency}{{rendered_value}} ;;
@@ -40,12 +42,14 @@ view: vw_conv_summary {
   }
 
   measure: transactions {
+    view_label: "Orders"
     type: sum
     sql: ${TABLE}.transac ;;
     value_format: "#,##0"
   }
 
   measure: cost_per_transaction {
+    view_label: "Cost Per Orders"
     type: number
     sql: SAFE_DIVIDE(${spends},${transactions});;
     html: @{currency}{{rendered_value}} ;;
