@@ -10,8 +10,8 @@ persist_with: theobroma_datagroup
 
 
 explore: ga4_traffic {
-  view_label: "Traffic"
-  label: "Traffic"
+  view_label: "Theobroma Data Model"
+  label: "Theobroma Data Model"
 
   sql_always_where:
 
