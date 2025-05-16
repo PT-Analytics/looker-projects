@@ -40,7 +40,7 @@ view: vw_conv_summary {
     type: sum
     sql: ${TABLE}.revenue ;;
     html: @{currency}{{rendered_value}} ;;
-    value_format: "#,##0"
+    value_format: "0"
   }
 
   measure: transactions {
