@@ -8,6 +8,10 @@ datagroup: theobroma_datagroup {
 
 persist_with: theobroma_datagroup
 
+explore: vw_theobroma_monetization {
+  view_label: "Theobroma Monetization"
+  label: "Theobroma Monetization"
+}
 
 explore: ga4_traffic {
   view_label: "Traffic"
