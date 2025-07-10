@@ -120,7 +120,7 @@ view: google_ads {
     type: sum
     sql: ${TABLE}.cost_micros / 1000000 ;;
     html: @{currency}{{rendered_value}} ;;
-    value_format: "[>=1000000]0.00,,\"M\";[>=1000]0.00,\"K\""
+    value_format: "#,##0"
   }
 
   measure: impressions {
