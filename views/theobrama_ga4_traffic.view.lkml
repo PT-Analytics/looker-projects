@@ -8,10 +8,7 @@ view: theobrama_ga4_traffic {
     datatype: date
     sql: ${TABLE}.date ;;
   }
-  dimension: month {
-    type: string
-    sql: ${TABLE}.month ;;
-  }
+
   dimension: new_vs_returning {
     type: string
     sql: ${TABLE}.new_vs_returning ;;
