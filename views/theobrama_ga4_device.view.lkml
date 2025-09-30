@@ -1,5 +1,5 @@
 view: theobrama_ga4_device {
-  sql_table_name: `puretech-edw.Theobroma.Theobrama_GA4_Device` ;;
+  sql_table_name: `puretech-edw.Theobroma.VW_Theobrama_GA4_Device` ;;
 
   dimension_group: date {
     type: time
