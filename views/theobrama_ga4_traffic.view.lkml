@@ -55,6 +55,16 @@ view: theobrama_ga4_traffic {
     sql: ${TABLE}.sessions ;;
     value_format: "#,##0"
   }
+  measure: new_users {
+    type: sum
+    sql: ${TABLE}.new_users ;;
+    value_format: "#,##0"
+  }
+  measure: returning_users {
+    type: sum
+    sql: ${TABLE}.returning_users ;;
+    value_format: "#,##0"
+  }
 
   measure: total_users {
     type: sum
