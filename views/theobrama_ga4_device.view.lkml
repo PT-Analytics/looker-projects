@@ -16,6 +16,10 @@ view: theobrama_ga4_device {
     type: string
     sql: ${TABLE}.devicecategory ;;
   }
+  dimension: session_default_channel_group {
+    type: string
+    sql: ${TABLE}.session_default_channel_group ;;
+  }
   measure: sessions {
     type: sum
     sql: ${TABLE}.sessions ;;
