@@ -12,6 +12,26 @@ explore: vw_theobroma_monetization {
   view_label: "Theobroma Monetization"
   label: "Theobroma Monetization"
 }
+explore: theobrama_ga4_channelwise {
+  label: "Theobroma GA4 - Channelwise"
+  view_label: "Theobrama Channelwise"
+}
+
+explore: theobrama_ga4_device {
+  label: "Theobroma GA4 - Device"
+  view_label: "Theobrama Device"
+}
+
+explore: theobrama_ga4_landingpage {
+  label: "Theobroma GA4 - Landing Page"
+  view_label: "Theobrama Landing Page"
+}
+
+explore: theobrama_ga4_traffic {
+  label: "Theobroma GA4 - Traffic"
+  view_label: "Theobrama Traffic"
+}
+
 
 explore: ga4_traffic {
   view_label: "Theobroma Data Model"
