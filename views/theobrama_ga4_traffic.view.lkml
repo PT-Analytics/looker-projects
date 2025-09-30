@@ -1,5 +1,5 @@
 view: theobrama_ga4_traffic {
-  sql_table_name: `puretech-edw.Theobroma.Theobrama_GA4_Traffic` ;;
+  sql_table_name: `puretech-edw.Theobroma.VW_Theobrama_GA4_Traffic` ;;
 
   dimension_group: date {
     type: time
