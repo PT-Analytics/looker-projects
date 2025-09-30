@@ -34,6 +34,10 @@ explore: theobrama_ga4_landingpage {
   label: "Theobroma GA4 - Landing Page"
   view_label: "Theobrama Landing Page"
 }
+explore: vw_theobrama_ga4_citywise {
+  label: "Theobroma GA4 - City "
+  view_label: "Theobrama City "
+}
 
 explore: theobrama_ga4_traffic {
   label: "Theobroma GA4 - Traffic"
