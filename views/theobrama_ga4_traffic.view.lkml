@@ -58,7 +58,7 @@ view: theobrama_ga4_traffic {
 
   measure: total_users {
     type: sum
-    sql: ${TABLE}.totalusers ;;
+    sql: ${TABLE}.total_users ;;
     value_format: "#,##0"
   }
 
