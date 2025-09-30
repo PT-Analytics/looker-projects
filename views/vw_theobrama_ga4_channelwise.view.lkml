@@ -20,6 +20,16 @@ view: vw_theobrama_ga4_channelwise {
     sql: ${TABLE}.cross_network_sessions ;;
     value_format: "#,##0"
   }
+  measure: paid_other_sessions {
+    type: sum
+    sql: ${TABLE}.paid_other_sessions ;;
+    value_format: "#,##0"
+  }
+  measure: organic_video_sessions {
+    type: sum
+    sql: ${TABLE}.organic_video_sessions ;;
+    value_format: "#,##0"
+  }
 
   measure: direct_sessions {
     type: sum
