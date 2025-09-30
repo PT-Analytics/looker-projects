@@ -15,6 +15,7 @@ view: theobrama_ga4_device {
   dimension: devicecategory {
     type: string
     sql: ${TABLE}.devicecategory ;;
+    label: "Device category"
   }
   dimension: session_default_channel_group {
     type: string

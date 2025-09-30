@@ -9,6 +9,7 @@ view: vw_theobrama_gsc {
   measure: ctr {
     type: average
     sql: ${TABLE}.ctr ;;
+    label: "CTR"
     value_format: "0.00%"
   }
   dimension_group: date {

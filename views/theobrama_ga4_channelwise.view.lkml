@@ -20,6 +20,7 @@ view: theobrama_ga4_channelwise {
   measure: totalusers {
     type: sum
     sql: ${TABLE}.totalusers ;;
+    label: "Total users"
     value_format: "#,##0"
   }
   measure: count {

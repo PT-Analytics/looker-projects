@@ -37,6 +37,7 @@ view: theobrama_ga4_landingpage {
   measure: newusers {
     type: sum
     sql: ${TABLE}.newusers ;;
+    label: "New users"
     value_format: "#,##0"
   }
 
