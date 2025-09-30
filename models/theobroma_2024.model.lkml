@@ -20,6 +20,10 @@ explore: vw_theobrama_ga4_channelwise {
   label: "VW Theobroma GA4 - Channelwise New"
   view_label: "VW Theobrama Channelwise"
 }
+explore: vw_theobrama_gsc {
+  label: "VW Theobroma GSC"
+  view_label: "VW Theobrama GSC"
+}
 
 explore: theobrama_ga4_device {
   label: "Theobroma GA4 - Device"
