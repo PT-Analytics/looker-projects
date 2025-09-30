@@ -2,12 +2,12 @@ view: vw_theobrama_gsc {
   sql_table_name: `puretech-edw.Theobroma.VW_Theobrama_GSC` ;;
 
   measure: clicks {
-    type: number
+    type: sum
     sql: ${TABLE}.clicks ;;
     value_format: "#,##0"
   }
   measure: ctr {
-    type: number
+    type: average
     sql: ${TABLE}.ctr ;;
     value_format: "0.00%"
   }
@@ -19,12 +19,12 @@ view: vw_theobrama_gsc {
     sql: ${TABLE}.date ;;
   }
   measure: impressions {
-    type: number
+    type: sum
     sql: ${TABLE}.impressions ;;
     value_format: "#,##0"
   }
   measure: position {
-    type: number
+    type: sum
     sql: ${TABLE}.position ;;
     value_format: "#,##0.00"
   }
