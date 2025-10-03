@@ -7,7 +7,10 @@ datagroup: theobroma_datagroup {
 }
 
 persist_with: theobroma_datagroup
-
+explore: vw_theobrama_ga4_channelwise_new {
+  view_label: "Channelwise new"
+  label: "Channelwise new"
+}
 explore: vw_theobroma_monetization {
   view_label: "Theobroma Monetization"
   label: "Theobroma Monetization"
