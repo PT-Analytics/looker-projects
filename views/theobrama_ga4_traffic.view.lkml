@@ -9,10 +9,6 @@ view: theobrama_ga4_traffic {
     sql: ${TABLE}.date ;;
   }
 
-  dimension: new_vs_returning {
-    type: string
-    sql: ${TABLE}.new_vs_returning ;;
-  }
 
   dimension: session_default_channel_group {
     type: string
@@ -61,10 +57,11 @@ view: theobrama_ga4_traffic {
     value_format: "#,##0"
   }
   measure: returning_users {
-    type: sum
-    sql: ${TABLE}.returning_users ;;
+    type: number
+    sql: ${users} - ${new_users} ;;
     value_format: "#,##0"
   }
+
 
   measure: total_users {
     type: sum
