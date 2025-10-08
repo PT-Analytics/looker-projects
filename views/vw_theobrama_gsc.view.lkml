@@ -6,6 +6,10 @@ view: vw_theobrama_gsc {
     sql: ${TABLE}.clicks ;;
     value_format: "#,##0"
   }
+  dimension: search_type {
+    type: string
+    sql: ${TABLE}.search_type ;;
+  }
   measure: ctr {
     type: average
     sql: ${TABLE}.ctr ;;
