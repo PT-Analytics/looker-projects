@@ -21,7 +21,7 @@ view: vw_theobroma_non_boverall {
   measure: non_branded_positon {
     type: sum
     sql: ${TABLE}.non_branded_positon ;;
-    value_format: "#,##0"
+    value_format: "#,##0.00"
   }
   measure: non_banded_ctr {
     type: number
