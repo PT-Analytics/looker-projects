@@ -11,6 +11,10 @@ explore: vw_theobrama_gsc_exlude_query {
   view_label: "Exclude query"
   label: "Exclude query"
 }
+explore: vw_theobrama_gsc_branded {
+  view_label: "Branded overall"
+  label: "Branded overall"
+}
 explore: vw_theobrama_ga4_channelwise_new {
   view_label: "Channelwise new"
   label: "Channelwise new"
