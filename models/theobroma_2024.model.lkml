@@ -8,17 +8,21 @@ datagroup: theobroma_datagroup {
 
 persist_with: theobroma_datagroup
 explore: vw_theobrama_gsc_exlude_query {
-  view_label: "Exclude query"
   label: "Exclude query"
+  view_label: "Exclude query"
+
+
+  join: vw_theobrama_gsc_branded {
+    type: full_outer
+    relationship: many_to_many
+    sql_on: ${vw_theobrama_gsc_branded.date_date} = ${vw_theobrama_gsc_exlude_query.date_date} ;;
+  }
 }
 explore: vw_theobrama_gsc_branded {
   view_label: "Branded overall"
   label: "Branded overall"
 }
-explore: vw_theobrama_gsc_non_branded {
-  view_label: "Non Branded overall"
-  label: "Non Branded overall"
-}
+
 explore: vw_theobrama_ga4_channelwise_new {
   view_label: "Channelwise new"
   label: "Channelwise new"
@@ -185,5 +189,4 @@ explore: ga4_traffic {
     type: full_outer
     sql_on: ${platform_wise_spends_trans_revenue.date_date} = ${ga4_traffic.date_date}  ;;
 }
-
 }
