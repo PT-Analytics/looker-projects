@@ -10,14 +10,15 @@ persist_with: theobroma_datagroup
 explore: vw_theobrama_gsc_exlude_query {
   label: "Exclude query"
   view_label: "Exclude query"
-
+  symmetric_aggregates: yes
 
   join: vw_theobrama_gsc_branded {
     type: full_outer
     relationship: many_to_many
-    sql_on: ${vw_theobrama_gsc_exlude_query.date_date}} = ${vw_theobrama_gsc_branded.date_date} ;;
+    sql_on: ${vw_theobrama_gsc_exlude_query.date_date} = ${vw_theobrama_gsc_branded.date_date} ;;
   }
 }
+
 explore: vw_theobrama_gsc_branded {
   view_label: "Branded overall"
   label: "Branded overall"
