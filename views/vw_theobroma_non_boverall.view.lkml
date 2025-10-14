@@ -19,7 +19,7 @@ view: vw_theobroma_non_boverall {
     value_format: "#,##0"
   }
   measure: non_branded_positon {
-    type: sum
+    type: average
     sql: ${TABLE}.non_branded_positon ;;
     value_format: "#,##0.00"
   }

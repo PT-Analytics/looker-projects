@@ -22,7 +22,7 @@ view: vw_theobrama_gsc_branded {
   }
 
   measure: avg_position {
-    type: sum
+    type: average
     sql: ${TABLE}.avg_position ;;
     value_format: "#,##0.00"
   }
