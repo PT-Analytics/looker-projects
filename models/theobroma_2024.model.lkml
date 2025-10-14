@@ -7,6 +7,10 @@ datagroup: theobroma_datagroup {
 }
 
 persist_with: theobroma_datagroup
+explore: vw_theobrama_gsc_exlude_query {
+  view_label: "Exclude query"
+  label: "Exclude query"
+}
 explore: vw_theobrama_ga4_channelwise_new {
   view_label: "Channelwise new"
   label: "Channelwise new"
