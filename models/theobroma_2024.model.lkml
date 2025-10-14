@@ -18,6 +18,10 @@ explore: vw_theobrama_gsc_exlude_query {
     sql_on: ${vw_theobrama_gsc_exlude_query.date_date} = ${vw_theobrama_gsc_branded.date_date} ;;
   }
 }
+explore: vw_theobroma_non_boverall {
+  view_label: "None branded"
+  label: "None branded"
+}
 
 explore: vw_theobrama_gsc_branded {
   view_label: "Branded overall"
