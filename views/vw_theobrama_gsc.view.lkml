@@ -29,9 +29,9 @@ view: vw_theobrama_gsc {
     value_format: "#,##0"
   }
   measure: position {
-    type: sum
+    type: average
     sql: ${TABLE}.position ;;
-    value_format: "#,##0.00"
+    value_format: "#,##0.0"
   }
   dimension: query {
     type: string
