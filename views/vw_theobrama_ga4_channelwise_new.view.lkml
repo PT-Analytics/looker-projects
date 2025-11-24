@@ -8,6 +8,20 @@ view: vw_theobrama_ga4_channelwise_new {
     datatype: date
     sql: ${TABLE}.date ;;
   }
+  dimension: paid_media_total {
+    type: number
+    sql:
+    (
+      ${TABLE}.`Paid Search` +
+      ${TABLE}.`Paid Social` +
+      ${TABLE}.`Paid Video` +
+      ${TABLE}.`Paid Shopping` +
+      ${TABLE}.`Paid Other` +
+      ${TABLE}.Display
+    ) ;;
+    value_format: "#,##0"
+    label: "Paid Media Total"
+  }
 
   # Measures instead of dimensions
   measure: crossnetwork {
