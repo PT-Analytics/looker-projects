@@ -32,7 +32,7 @@ view: ga4_transaction_revenue {
 
   dimension: revenue_dim {
     type: number
-    sql: ${TABLE}.total_revenue ;;
+    sql: ${TABLE}.totalrevenue ;;
   }
 
   dimension: transaction_dim {
