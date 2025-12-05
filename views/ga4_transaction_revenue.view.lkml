@@ -4,13 +4,13 @@ view: ga4_transaction_revenue {
   # to be used for all fields in this view.
   sql_table_name: `puretech-edw.Theobroma.VW_GA4_Trans_Revenue` ;;
 
-
   dimension: __hevo_id {
+    primary_key: yes
+    hidden: yes
     type: string
     sql: ${TABLE}.__hevo_id ;;
-    primary_key:yes
-    hidden:yes
   }
+
 
   dimension_group: date {
     type: time
@@ -22,7 +22,7 @@ view: ga4_transaction_revenue {
 
   dimension: campaign_name {
     type: string
-    sql: ${TABLE}.session_manual_campaign_name ;;
+    sql: ${TABLE}.session_campaign_name ;;
   }
 
   dimension: source_medium {
@@ -32,7 +32,7 @@ view: ga4_transaction_revenue {
 
   dimension: revenue_dim {
     type: number
-    sql: ${TABLE}.totalrevenue ;;
+    sql: ${TABLE}.total_revenue ;;
   }
 
   dimension: transaction_dim {

@@ -3,16 +3,13 @@ view: ga4_traffic {
 
   sql_table_name: `puretech-edw.Theobroma.VW_Traffic` ;;
 
-  extends: [data_sources_aggregation]
 
-  dimension: __hevo_id {
+  dimension: hevo_id {
     primary_key: yes
     hidden: yes
     type: string
     sql: ${TABLE}.__hevo_id ;;
   }
-  # Dates and timestamps can be represented in Looker using a dimension group of type: time.
-  # Looker converts dates and timestamps to the specified timeframes within the dimension group.
 
   dimension_group: date {
     type: time
