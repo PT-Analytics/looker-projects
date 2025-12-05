@@ -22,7 +22,7 @@ view: ga4_transaction_revenue {
 
   dimension: campaign_name {
     type: string
-    sql: ${TABLE}.session_campaign_name ;;
+    sql: ${TABLE}.session_manual_campaign_name ;;
   }
 
   dimension: source_medium {
