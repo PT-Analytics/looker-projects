@@ -9,6 +9,12 @@ view: vw_theobroma_google_meta {
     sql: ${TABLE}.date ;;
   }
 
+  # -------- Only Dimension -------- #
+  dimension: platform {
+    type: string
+    sql: ${TABLE}.platform ;;
+  }
+
   # -------- Measures (Converted from Dimensions) -------- #
 
   measure: campaign {
@@ -50,11 +56,6 @@ view: vw_theobroma_google_meta {
     type: sum
     sql: ${TABLE}.impressions ;;
     value_format: "#,##0"
-  }
-
-  measure: platform {
-    type: count_distinct
-    sql: ${TABLE}.platform ;;
   }
 
   measure: purchase_revenue {
@@ -99,15 +100,6 @@ view: vw_theobroma_google_meta {
     value_format: "0.00%"
   }
 
-  # # NOTE: Replace ${purchases_conversion_value} with the actual measure name
-  # # from your ad platform (Google/Meta) that holds "Purchases Conversion Value".
-  # measure: dashboard_roas {
-  #   label: "Dashboard ROAS"
-  #   type: number
-  #   sql: SAFE_DIVIDE(${purchases_conversion_value}, NULLIF(${cost}, 0)) ;;
-  #   value_format: "0.00x"
-  # }
-
   measure: analytics_roas {
     label: "Analytics ROAS"
     type: number
@@ -136,7 +128,6 @@ view: vw_theobroma_google_meta {
     sql: SAFE_DIVIDE(${purchase_revenue}, NULLIF(${transactions}, 0)) ;;
     value_format: "#,##0.00"
   }
-
 
   measure: count {
     type: count
