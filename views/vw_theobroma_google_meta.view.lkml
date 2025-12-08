@@ -103,14 +103,14 @@ view: vw_theobroma_google_meta {
   }
 
   measure: ctr {
-    label: "CTR%"
+    label: "CTR %"
     type: number
     sql: SAFE_DIVIDE(${clicks}, NULLIF(${impressions}, 0)) * 100 ;;
     value_format: "0.00%"
   }
 
   measure: click_to_session {
-    label: "Click to Session%"
+    label: "Click to Session %"
     type: number
     sql: SAFE_DIVIDE(${sessions}, NULLIF(${clicks}, 0)) * 100 ;;
     value_format: "0.00%"
@@ -124,7 +124,7 @@ view: vw_theobroma_google_meta {
   }
 
   measure: cr {
-    label: "CR%"
+    label: "CR %"
     type: number
     sql: SAFE_DIVIDE(${ecommerce_purchases}, NULLIF(${sessions}, 0)) * 100 ;;
     value_format: "0.00%"
