@@ -23,7 +23,7 @@ view: vw_theobroma_google_meta {
   ## Month Format → August, September, ...
   dimension: month_name {
     type: string
-    sql: FORMAT_DATE('%B', ${date_date}) ;;
+    sql: FORMAT_DATE('%B %Y', ${date_date}) ;;
   }
   # -------- Dimensions -------- #
   dimension: platform {
