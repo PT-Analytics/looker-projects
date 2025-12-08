@@ -9,23 +9,23 @@ view: vw_theobroma_google_meta {
     sql: ${TABLE}.date ;;
   }
 
-  # -------- Only Dimension -------- #
+  # -------- Dimensions -------- #
   dimension: platform {
     type: string
     sql: ${TABLE}.platform ;;
   }
 
-  # -------- Measures (Converted from Dimensions) -------- #
-
-  measure: campaign {
-    type: count_distinct
+  dimension: campaign {
+    type: string
     sql: ${TABLE}.campaign ;;
   }
 
-  measure: campaign_name {
-    type: count_distinct
+  dimension: campaign_name {
+    type: string
     sql: ${TABLE}.campaign_name ;;
   }
+
+  # -------- Measures -------- #
 
   measure: clicks {
     type: sum
