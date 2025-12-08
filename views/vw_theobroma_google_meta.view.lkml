@@ -74,6 +74,69 @@ view: vw_theobroma_google_meta {
     value_format: "#,##0"
   }
 
+  # ---------- Calculated Metrics ---------- #
+
+  measure: cpc {
+    label: "CPC"
+    type: number
+    sql: SAFE_DIVIDE(${cost}, NULLIF(${clicks}, 0)) ;;
+    html: @{currency}{{rendered_value}} ;;
+    value_format: "#,##0.00"
+  }
+
+  measure: ctr {
+    label: "CTR %"
+    type: number
+    sql: SAFE_DIVIDE(${clicks}, NULLIF(${impressions}, 0)) * 100 ;;
+    value_format: "0.00%"
+  }
+
+  measure: click_to_session {
+    label: "Click to Session %"
+    type: number
+    sql: SAFE_DIVIDE(${sessions}, NULLIF(${clicks}, 0)) * 100 ;;
+    value_format: "0.00%"
+  }
+
+  # # NOTE: Replace ${purchases_conversion_value} with the actual measure name
+  # # from your ad platform (Google/Meta) that holds "Purchases Conversion Value".
+  # measure: dashboard_roas {
+  #   label: "Dashboard ROAS"
+  #   type: number
+  #   sql: SAFE_DIVIDE(${purchases_conversion_value}, NULLIF(${cost}, 0)) ;;
+  #   value_format: "0.00x"
+  # }
+
+  measure: analytics_roas {
+    label: "Analytics ROAS"
+    type: number
+    sql: SAFE_DIVIDE(${purchase_revenue}, NULLIF(${cost}, 0)) ;;
+    value_format: "#,##0"
+  }
+
+  measure: cr {
+    label: "CR %"
+    type: number
+    sql: SAFE_DIVIDE(${ecommerce_purchases}, NULLIF(${sessions}, 0)) * 100 ;;
+    value_format: "0.00%"
+  }
+
+  measure: cpt {
+    label: "CPT"
+    type: number
+    sql: SAFE_DIVIDE(${cost}, NULLIF(${transactions}, 0)) ;;
+    html: @{currency}{{rendered_value}} ;;
+    value_format: "#,##0.00"
+  }
+
+  measure: aov {
+    label: "AOV"
+    type: number
+    sql: SAFE_DIVIDE(${purchase_revenue}, NULLIF(${transactions}, 0)) ;;
+    value_format: "#,##0.00"
+  }
+
+
   measure: count {
     type: count
   }
