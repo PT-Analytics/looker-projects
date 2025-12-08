@@ -36,6 +36,7 @@ view: vw_theobroma_google_meta {
   measure: cost {
     type: sum
     sql: ${TABLE}.cost ;;
+    html: @{currency}{{rendered_value}} ;;
     value_format: "#,##0.00"
   }
 
