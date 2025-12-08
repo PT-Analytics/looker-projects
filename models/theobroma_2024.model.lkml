@@ -69,7 +69,10 @@ explore: theobrama_ga4_traffic {
   label: "Theobroma GA4 - Traffic"
   view_label: "Theobrama Traffic"
 }
-
+explore: vw_theobroma_google_meta {
+  label: "Theobroma vw_theobroma_google_meta"
+  view_label: "Theobrama vw_theobroma_google_meta"
+}
 
 explore: ga4_traffic {
   view_label: "Theobroma Data Model"
@@ -196,4 +199,5 @@ explore: ga4_traffic {
     type: full_outer
     sql_on: ${platform_wise_spends_trans_revenue.date_date} = ${ga4_traffic.date_date}  ;;
 }
+
 }
