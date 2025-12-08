@@ -126,7 +126,7 @@ view: vw_theobroma_google_meta {
   measure: cr {
     label: "CR "
     type: number
-    sql: SAFE_DIVIDE(${ecommerce_purchases}, NULLIF(${sessions}, 0)) ;;
+    sql: SAFE_DIVIDE(${transactions}, NULLIF(${sessions}, 0)) ;;
     value_format: "0.00%"
   }
 
