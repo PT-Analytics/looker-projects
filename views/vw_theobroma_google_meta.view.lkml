@@ -8,7 +8,23 @@ view: vw_theobroma_google_meta {
     datatype: date
     sql: ${TABLE}.date ;;
   }
+  dimension: week_of_month_label {
+    type: string
+    sql:
+      CONCAT(
+        'Week ',
+        CAST(CEIL(EXTRACT(DAY FROM ${date_date}) / 7) AS STRING),
+        ' of ',
+        FORMAT_DATE('%b \'%y', ${date_date})
+      )
+    ;;
+  }
 
+  ## Month Format → August, September, ...
+  dimension: month_name {
+    type: string
+    sql: FORMAT_DATE('%B', ${date_date}) ;;
+  }
   # -------- Dimensions -------- #
   dimension: platform {
     type: string
