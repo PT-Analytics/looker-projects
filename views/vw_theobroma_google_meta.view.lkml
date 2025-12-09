@@ -88,6 +88,7 @@ view: vw_theobroma_google_meta {
   measure: purchase_revenue {
     type: sum
     sql: ${TABLE}.purchase_revenue ;;
+    html: @{currency}{{rendered_value}} ;;
     value_format: "#,##0.00"
   }
 
@@ -158,6 +159,7 @@ view: vw_theobroma_google_meta {
     label: "AOV"
     type: number
     sql: SAFE_DIVIDE(${purchase_revenue}, NULLIF(${transactions}, 0)) ;;
+    html: @{currency}{{rendered_value}} ;;
     value_format: "#,##0.00"
   }
 
