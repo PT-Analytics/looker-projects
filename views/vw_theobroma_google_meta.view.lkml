@@ -131,7 +131,7 @@ view: vw_theobroma_google_meta {
     label: "Analytics ROAS"
     type: number
     sql: SAFE_DIVIDE(${purchase_revenue}, NULLIF(${cost}, 0)) ;;
-    value_format: "#,##0"
+    value_format: "#,##0.00"
   }
   measure: dashboard_roas {
     label: "Dashboard ROAS"
