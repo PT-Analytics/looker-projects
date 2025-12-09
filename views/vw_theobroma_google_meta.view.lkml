@@ -67,7 +67,16 @@ view: vw_theobroma_google_meta {
     sql: ${TABLE}.ecommerce_purchases ;;
     value_format: "#,##0"
   }
-
+  measure: Platform_Purchases {
+    type: sum
+    sql: ${TABLE}.Purchases ;;
+    value_format: "#,##0"
+  }
+  measure: Platform_Purchases_value {
+    type: sum
+    sql: ${TABLE}.Conversion_Value ;;
+    value_format: "#,##0"
+  }
   measure: impressions {
     type: sum
     sql: ${TABLE}.impressions ;;
