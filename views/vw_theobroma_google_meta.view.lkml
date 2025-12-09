@@ -70,11 +70,13 @@ view: vw_theobroma_google_meta {
   measure: Platform_Purchases {
     type: sum
     sql: ${TABLE}.Purchases ;;
+    label: "Conversions/Purchases"
     value_format: "#,##0"
   }
   measure: Platform_Purchases_value {
     type: sum
     sql: ${TABLE}.Conversion_Value ;;
+    label: "Conversions/Purchases value"
     value_format: "#,##0"
   }
   measure: impressions {
@@ -131,7 +133,12 @@ view: vw_theobroma_google_meta {
     sql: SAFE_DIVIDE(${purchase_revenue}, NULLIF(${cost}, 0)) ;;
     value_format: "#,##0"
   }
-
+  measure: dashboard_roas {
+    label: "Dashboard ROAS"
+    type: number
+    sql: SAFE_DIVIDE(${Platform_Purchases}, NULLIF(${cost}, 0)) ;;
+    value_format: "#,##0.00"
+  }
   measure: cr {
     label: "CR "
     type: number
