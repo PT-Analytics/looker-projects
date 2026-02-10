@@ -137,7 +137,7 @@ view: vw_theobroma_google_meta {
   measure: dashboard_roas {
     label: "Dashboard ROAS"
     type: number
-    sql: SAFE_DIVIDE(${Platform_Purchases}, NULLIF(${cost}, 0)) ;;
+    sql: SAFE_DIVIDE(${Platform_Purchases_value}, NULLIF(${cost}, 0)) ;;
     value_format: "#,##0.00"
   }
   measure: cr {
